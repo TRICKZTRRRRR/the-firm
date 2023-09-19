@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace the_firm.Model
 {
-    internal class Sweeper : employee
+    internal class Sweeper : Employee
     {
-        public Sweeper(string fornavn, string efternavn, string cprNummer, int phoneNumber) : base(fornavn, efternavn, cprNummer)
+        public Sweeper(string fornavn, string efternavn, string cprNummer) : base(fornavn, efternavn, cprNummer)
         { 
         }
     }

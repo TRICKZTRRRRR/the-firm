@@ -44,9 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
-    <Compile Include="Model\employee.cs" />
-    <Compile Include="Model\manager.cs" />
-    <Compile Include="Model\projectmanager.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Manager.cs" />
+    <Compile Include="Model\Projectmanager.cs" />
     <Compile Include="Model\Sweeper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

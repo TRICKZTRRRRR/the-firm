@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace the_firm.Model
 {
-    internal class projectmanager: manager
+    internal class Projectmanager: Manager
     {
-        private string _email;
+        protected string Email { get; set; }
 
-        public string MailAdresse { get { return _email; } set {  _email = value; } }
 
-        public projectmanager(string fornavn, string efternavn, string cprNummer, int phoneNumber, string email) : base(fornavn, efternavn, cprNummer, phoneNumber)
+        public Projectmanager(string fornavn, string efternavn, string cprNummer, int telefonNummer, string email) : base(fornavn, efternavn, cprNummer, telefonNummer)
         {
-            MailAdresse = email;
+            Email = email;
         }
 
-        public void Email(string mail)
+        public new void PrintInfo()
         {
-            mail = "wdada@gmail.com";
+            base.PrintInfo();
+            Console.WriteLine($"Mail: {Email}");
         }
     }
 }

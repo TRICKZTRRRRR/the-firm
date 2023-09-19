@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace the_firm.Model
 {
-    internal class manager: employee
+    internal class Manager: Employee
     {
-        private int _phoneNumber;
+        protected int TelefonNummer {  get; set; }
 
-        public int PhoneNumber { get { return _phoneNumber; } set {  _phoneNumber = value; } }
 
-        public manager(string fornavn, string efternavn, string cprNummer, int phoneNumber) : base(fornavn, efternavn, cprNummer)
+        public Manager(string fornavn, string efternavn, string cprNummer, int telefonNummer) : base(fornavn, efternavn, cprNummer)
         {
-            PhoneNumber = phoneNumber;
+            TelefonNummer = telefonNummer;
         }
 
-        public void Manager(int phoneNumber)
+        public new void PrintInfo()
         {
-            phoneNumber = 32763289;
+            base.PrintInfo();
+            Console.WriteLine($"Nummer: {TelefonNummer}");
         }
     }
 }
