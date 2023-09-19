@@ -8,6 +8,8 @@ namespace the_firm.Model
 {
     internal class Manager: Employee
     {
+        View.View view = new View.View();
+
         protected int TelefonNummer {  get; set; }
 
 
@@ -19,7 +21,7 @@ namespace the_firm.Model
         public new void PrintInfo()
         {
             base.PrintInfo();
-            Console.WriteLine($"Nummer: {TelefonNummer}");
+            view.PhoneNumber(TelefonNummer);
         }
     }
 }

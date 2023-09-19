@@ -9,6 +9,8 @@ namespace the_firm.Model
 {
     internal class Employee
     {
+        View.View view = new View.View();
+
 
         protected string Fornavn {  get; set; }
         protected string Efternavn { get; set; }
@@ -23,8 +25,7 @@ namespace the_firm.Model
 
         public void PrintInfo()
         {
-            Console.WriteLine($"Name: {Fornavn} {Efternavn}\n" +
-                $"CprNummer: {CprNummer}");
+            view.Name(Fornavn, Efternavn, CprNummer);
         }
     }
 }

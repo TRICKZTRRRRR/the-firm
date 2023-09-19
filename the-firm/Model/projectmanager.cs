@@ -8,6 +8,8 @@ namespace the_firm.Model
 {
     internal class Projectmanager: Manager
     {
+        View.View view = new View.View();
+
         protected string Email { get; set; }
 
 
@@ -19,7 +21,7 @@ namespace the_firm.Model
         public new void PrintInfo()
         {
             base.PrintInfo();
-            Console.WriteLine($"Mail: {Email}");
+            view.Mail(Email);
         }
     }
 }

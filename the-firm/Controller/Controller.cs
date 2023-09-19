@@ -9,6 +9,8 @@ namespace the_firm.Controller
 {
     internal class Controller
     {
+        View.View view = new View.View();
+
         public void MainController()
         {
             Employee medarbejder = new Employee("Torben", "Hansen", "01/09/98-7168");
@@ -16,19 +18,19 @@ namespace the_firm.Controller
             Projectmanager projectmanager = new Projectmanager("Kris", "Hansen", "21/05/98-3596", 26357806, "kris@zbc.dk");
             Sweeper sweeper = new Sweeper("Mogens", "Mogensen", "31/12/66-9253");
 
-            Console.WriteLine("Employee:");
+            view.EmployeeData();
             medarbejder.PrintInfo();
 
-            Console.WriteLine("\nManager:");
+            view.ManagerData();
             manager.PrintInfo();
 
-            Console.WriteLine("\nProject Manager:");
+            view.ProjectManagerData();
             projectmanager.PrintInfo();
 
-            Console.WriteLine("\nSweeper:");
+            view.SweeperData();
             sweeper.PrintInfo();
 
-            Console.ReadLine();
+            view.ReadLine();
         }
     }
 }
