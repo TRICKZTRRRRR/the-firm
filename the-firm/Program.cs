@@ -10,6 +10,12 @@ namespace the_firm
     {
         static void Main(string[] args)
         {
+            #region Execute Controller
+
+            Controller.Controller controller = new Controller.Controller();
+            controller.MainController();
+
+            #endregion
         }
     }
 }
